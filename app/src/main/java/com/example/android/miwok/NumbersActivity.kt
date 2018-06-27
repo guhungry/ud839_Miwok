@@ -25,7 +25,7 @@ class NumbersActivity : AppCompatActivity() {
         list_word.setOnItemClickListener { adapter, view, position, id ->
             val item = adapter.getItemAtPosition(position) as Word
 
-            AudioUtils.playAudio(this@NumbersActivity, item.audio)
+            AudioUtils.playAudio(this@NumbersActivity, audioManager(), item.audio)
         }
     }
 

@@ -1,5 +1,8 @@
 package com.example.android.miwok
 
+import android.content.Context
+import android.media.AudioFocusRequest
+import android.media.AudioManager
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.example.android.miwok.adapters.WordAdapter
@@ -25,7 +28,7 @@ class PhrasesActivity : AppCompatActivity() {
         list_word.setOnItemClickListener { adapter, view, position, id ->
             val item = adapter.getItemAtPosition(position) as Word
 
-            AudioUtils.playAudio(this@PhrasesActivity, item.audio)
+            AudioUtils.playAudio(this@PhrasesActivity, audioManager(), item.audio)
         }
     }
 

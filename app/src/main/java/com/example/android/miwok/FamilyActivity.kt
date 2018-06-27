@@ -26,7 +26,7 @@ class FamilyActivity : AppCompatActivity() {
         list_word.setOnItemClickListener { adapter, view, position, id ->
             val item = adapter.getItemAtPosition(position) as Word
 
-            AudioUtils.playAudio(this@FamilyActivity, item.audio)
+            AudioUtils.playAudio(this@FamilyActivity, audioManager(), item.audio)
         }
     }
 

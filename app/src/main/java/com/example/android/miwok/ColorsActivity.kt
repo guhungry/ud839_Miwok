@@ -25,7 +25,7 @@ class ColorsActivity : AppCompatActivity() {
         list_word.setOnItemClickListener { adapter, view, position, id ->
             val item = adapter.getItemAtPosition(position) as Word
 
-            AudioUtils.playAudio(this@ColorsActivity, item.audio)
+            AudioUtils.playAudio(this@ColorsActivity, audioManager(), item.audio)
         }
     }
 
