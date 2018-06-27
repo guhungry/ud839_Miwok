@@ -10,14 +10,23 @@ class AudioUtils {
 
         fun playAudio(context: Context, audioManager: AudioManager, file: Int) {
             releaseAudio()
-            audioManager.requestAudioFocus(listener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT)
-            player = MediaPlayer.create(context, file).apply {
+            if (requestAudioFocus(audioManager)) {
+                player = createPlayerAndPlay(context, file, audioManager)
+            }
+        }
+
+        private fun createPlayerAndPlay(context: Context, file: Int, audioManager: AudioManager): MediaPlayer? {
+            return MediaPlayer.create(context, file).apply {
                 setOnCompletionListener { player ->
                     audioManager.abandonAudioFocus(listener)
                     releaseAudio()
                 }
                 start()
             }
+        }
+
+        private fun requestAudioFocus(audioManager: AudioManager): Boolean {
+            return audioManager.requestAudioFocus(listener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT) == AudioManager.AUDIOFOCUS_REQUEST_GRANTED
         }
 
         fun resumeAudio() {
