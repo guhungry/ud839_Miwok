@@ -15,15 +15,37 @@
  */
 package com.example.android.miwok
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.View
+import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
-
+class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main)
+        numbers.setOnClickListener(this)
+        family.setOnClickListener(this)
+        colors.setOnClickListener(this)
+        phrases.setOnClickListener(this)
+    }
+
+    override fun onClick(view: View?) {
+        val intent = intentFromViewId(view?.id ?: 0)
+
+        if (intent != null) startActivity(intent)
+     }
+
+    private fun intentFromViewId(id: Int): Intent? {
+        return when (id) {
+            R.id.numbers -> Intent(this, NumbersActivity::class.java)
+            R.id.family -> Intent(this, FamilyActivity::class.java)
+            R.id.colors -> Intent(this, ColorsActivity::class.java)
+            R.id.phrases -> Intent(this, PhrasesActivity::class.java)
+            else -> null
+        }
     }
 }
