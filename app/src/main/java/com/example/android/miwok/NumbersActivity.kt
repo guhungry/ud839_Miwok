@@ -3,10 +3,11 @@ package com.example.android.miwok
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.example.android.miwok.adapters.WordAdapter
+import com.example.android.miwok.models.Word
 import kotlinx.android.synthetic.main.activity_numbers.*
 
 class NumbersActivity : AppCompatActivity() {
-    val list = arrayListOf("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten")
+    val list = wordList()
     var adapter: WordAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,5 +21,20 @@ class NumbersActivity : AppCompatActivity() {
         adapter = WordAdapter(this, list)
 
         list_word.adapter = adapter
+    }
+
+    private fun wordList(): ArrayList<Word> {
+        return arrayListOf(
+                Word(english = "one"),
+                Word(english = "two"),
+                Word(english = "three"),
+                Word(english = "four"),
+                Word(english = "five"),
+                Word(english = "six"),
+                Word(english = "seven"),
+                Word(english = "eight"),
+                Word(english = "nine"),
+                Word(english = "ten")
+        )
     }
 }
