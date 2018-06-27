@@ -29,6 +29,12 @@ class ColorsActivity : AppCompatActivity() {
         }
     }
 
+    override fun onStop() {
+        AudioUtils.releaseAudio()
+
+        super.onStop()
+    }
+
     private fun wordList(): ArrayList<Word> {
         return arrayListOf(
                 Word(default = "red", miwok = "weṭeṭṭi", image = R.drawable.color_red, audio = R.raw.color_red),

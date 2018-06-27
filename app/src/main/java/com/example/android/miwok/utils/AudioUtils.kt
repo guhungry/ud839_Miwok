@@ -17,7 +17,7 @@ class AudioUtils {
             }
         }
 
-        private fun releaseAudio() {
+        fun releaseAudio() {
             player?.release()
             player = null
         }

@@ -29,6 +29,12 @@ class NumbersActivity : AppCompatActivity() {
         }
     }
 
+    override fun onStop() {
+        AudioUtils.releaseAudio()
+
+        super.onStop()
+    }
+
     private fun wordList(): ArrayList<Word> {
         return arrayListOf(
                 Word(default = "one", miwok = "lutti", image = R.drawable.number_one, audio = R.raw.number_one),

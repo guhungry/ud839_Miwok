@@ -30,6 +30,12 @@ class FamilyActivity : AppCompatActivity() {
         }
     }
 
+    override fun onStop() {
+        AudioUtils.releaseAudio()
+
+        super.onStop()
+    }
+
     private fun wordList(): ArrayList<Word> {
         return arrayListOf(
                 Word(default = "father", miwok = "әpә", image = R.drawable.family_father, audio = R.raw.family_father),

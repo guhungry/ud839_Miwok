@@ -29,6 +29,12 @@ class PhrasesActivity : AppCompatActivity() {
         }
     }
 
+    override fun onStop() {
+        AudioUtils.releaseAudio()
+
+        super.onStop()
+    }
+
     private fun wordList(): ArrayList<Word> {
         return arrayListOf(
                 Word(default = "Where are you going?", miwok = "minto wuksus", audio = R.raw.phrase_where_are_you_going),
