@@ -25,14 +25,14 @@ class ColorsActivity : AppCompatActivity() {
 
     private fun wordList(): ArrayList<Word> {
         return arrayListOf(
-                Word(default = "red", miwok = "weṭeṭṭi", image = R.drawable.color_red),
-                Word(default = "green", miwok = "chokokki", image = R.drawable.color_green),
-                Word(default = "brown", miwok = "ṭakaakki", image = R.drawable.color_brown),
-                Word(default = "gray", miwok = "ṭopoppi", image = R.drawable.color_gray),
-                Word(default = "black", miwok = "kululli", image = R.drawable.color_black),
-                Word(default = "white", miwok = "kelelli", image = R.drawable.color_white),
-                Word(default = "dusty yellow", miwok = "ṭopiisә", image = R.drawable.color_dusty_yellow),
-                Word(default = "mustard yellow", miwok = "chiwiiṭә", image = R.drawable.color_mustard_yellow)
+                Word(default = "red", miwok = "weṭeṭṭi", image = R.drawable.color_red, audio = R.raw.color_red),
+                Word(default = "green", miwok = "chokokki", image = R.drawable.color_green, audio = R.raw.color_green),
+                Word(default = "brown", miwok = "ṭakaakki", image = R.drawable.color_brown, audio = R.raw.color_brown),
+                Word(default = "gray", miwok = "ṭopoppi", image = R.drawable.color_gray, audio = R.raw.color_gray),
+                Word(default = "black", miwok = "kululli", image = R.drawable.color_black, audio = R.raw.color_black),
+                Word(default = "white", miwok = "kelelli", image = R.drawable.color_white, audio = R.raw.color_white),
+                Word(default = "dusty yellow", miwok = "ṭopiisә", image = R.drawable.color_dusty_yellow, audio = R.raw.color_dusty_yellow),
+                Word(default = "mustard yellow", miwok = "chiwiiṭә", image = R.drawable.color_mustard_yellow, audio = R.raw.color_mustard_yellow)
         )
     }
 }
