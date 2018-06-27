@@ -25,16 +25,16 @@ class FamilyActivity : AppCompatActivity() {
 
     private fun wordList(): ArrayList<Word> {
         return arrayListOf(
-                Word(default = "father", miwok = "әpә"),
-                Word(default = "mother", miwok = "әṭa"),
-                Word(default = "son", miwok = "angsi"),
-                Word(default = "daughter", miwok = "tune"),
-                Word(default = "older brother", miwok = "taachi"),
-                Word(default = "younger brother", miwok = "chalitti"),
-                Word(default = "older sister", miwok = "teṭe"),
-                Word(default = "younger sister", miwok = "kolliti"),
-                Word(default = "grandmother", miwok = "ama"),
-                Word(default = "grandfather", miwok = "paapa")
+                Word(default = "father", miwok = "әpә", image = R.drawable.family_father),
+                Word(default = "mother", miwok = "әṭa", image = R.drawable.family_mother),
+                Word(default = "son", miwok = "angsi", image = R.drawable.family_son),
+                Word(default = "daughter", miwok = "tune", image = R.drawable.family_daughter),
+                Word(default = "older brother", miwok = "taachi", image = R.drawable.family_older_brother),
+                Word(default = "younger brother", miwok = "chalitti", image = R.drawable.family_younger_brother),
+                Word(default = "older sister", miwok = "teṭe", image = R.drawable.family_older_sister),
+                Word(default = "younger sister", miwok = "kolliti", image = R.drawable.family_younger_sister),
+                Word(default = "grandmother", miwok = "ama", image = R.drawable.family_grandmother),
+                Word(default = "grandfather", miwok = "paapa", image = R.drawable.family_grandfather)
         )
     }
 }

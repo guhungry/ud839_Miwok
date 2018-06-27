@@ -25,16 +25,16 @@ class NumbersActivity : AppCompatActivity() {
 
     private fun wordList(): ArrayList<Word> {
         return arrayListOf(
-                Word(default = "one", miwok = "lutti"),
-                Word(default = "two", miwok = "otiiko"),
-                Word(default = "three", miwok = "tolookosu"),
-                Word(default = "four", miwok = "oyyisa"),
-                Word(default = "five", miwok = "massokka"),
-                Word(default = "six", miwok = "temmokka"),
-                Word(default = "seven", miwok = "kenekaku"),
-                Word(default = "eight", miwok = "kawinta"),
-                Word(default = "nine", miwok = "wo’e"),
-                Word(default = "ten", miwok = "na’aacha")
+                Word(default = "one", miwok = "lutti", image = R.drawable.number_one),
+                Word(default = "two", miwok = "otiiko", image = R.drawable.number_two),
+                Word(default = "three", miwok = "tolookosu", image = R.drawable.number_three),
+                Word(default = "four", miwok = "oyyisa", image = R.drawable.number_four),
+                Word(default = "five", miwok = "massokka", image = R.drawable.number_five),
+                Word(default = "six", miwok = "temmokka", image = R.drawable.number_six),
+                Word(default = "seven", miwok = "kenekaku", image = R.drawable.number_seven),
+                Word(default = "eight", miwok = "kawinta", image = R.drawable.number_eight),
+                Word(default = "nine", miwok = "wo’e", image = R.drawable.number_nine),
+                Word(default = "ten", miwok = "na’aacha", image = R.drawable.number_ten)
         )
     }
 }

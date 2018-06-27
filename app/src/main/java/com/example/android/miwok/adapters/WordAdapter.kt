@@ -16,6 +16,8 @@ class WordAdapter(context: Context, list: ArrayList<Word>? = null): ArrayAdapter
         val view = if (convertView != null) convertView else inflater.inflate(R.layout.word_list_item, parent, false)
         val item = getItem(position)
 
+        if (item.hasImage()) view.image.setImageResource(item.image)
+        view.image.visibility = item.imageVisibility()
         view.miwok_text.text = item.miwok
         view.default_text.text = item.default
         return view
