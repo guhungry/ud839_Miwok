@@ -1,9 +1,11 @@
 package com.example.android.miwok
 
+import android.media.MediaPlayer
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.example.android.miwok.adapters.WordAdapter
 import com.example.android.miwok.models.Word
+import com.example.android.miwok.utils.AudioUtils
 import kotlinx.android.synthetic.main.activity_numbers.*
 
 class FamilyActivity : AppCompatActivity() {
@@ -21,6 +23,11 @@ class FamilyActivity : AppCompatActivity() {
         adapter = WordAdapter(this, list)
 
         list_word.adapter = adapter
+        list_word.setOnItemClickListener { adapter, view, position, id ->
+            val item = adapter.getItemAtPosition(position) as Word
+
+            AudioUtils.playAudio(this@FamilyActivity, item.audio)
+        }
     }
 
     private fun wordList(): ArrayList<Word> {
