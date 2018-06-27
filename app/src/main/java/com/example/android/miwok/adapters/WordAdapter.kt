@@ -16,6 +16,7 @@ class WordAdapter(context: Context, list: ArrayList<Word>? = null): ArrayAdapter
         val view = if (convertView != null) convertView else inflater.inflate(R.layout.word_list_item, parent, false)
         val item = getItem(position)
 
+        view.miwok.text = item.miwok
         view.english.text = item.english
         return view
     }

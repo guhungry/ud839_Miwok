@@ -25,7 +25,7 @@ class NumbersActivity : AppCompatActivity() {
 
     private fun wordList(): ArrayList<Word> {
         return arrayListOf(
-                Word(english = "one"),
+                Word(english = "one", miwok = "lutti"),
                 Word(english = "two"),
                 Word(english = "three"),
                 Word(english = "four"),
