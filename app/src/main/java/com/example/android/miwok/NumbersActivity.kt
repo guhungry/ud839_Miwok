@@ -25,16 +25,16 @@ class NumbersActivity : AppCompatActivity() {
 
     private fun wordList(): ArrayList<Word> {
         return arrayListOf(
-                Word(english = "one", miwok = "lutti"),
-                Word(english = "two"),
-                Word(english = "three"),
-                Word(english = "four"),
-                Word(english = "five"),
-                Word(english = "six"),
-                Word(english = "seven"),
-                Word(english = "eight"),
-                Word(english = "nine"),
-                Word(english = "ten")
+                Word(default = "one", miwok = "lutti"),
+                Word(default = "two"),
+                Word(default = "three"),
+                Word(default = "four"),
+                Word(default = "five"),
+                Word(default = "six"),
+                Word(default = "seven"),
+                Word(default = "eight"),
+                Word(default = "nine"),
+                Word(default = "ten")
         )
     }
 }

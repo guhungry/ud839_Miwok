@@ -11,14 +11,14 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <TextView
-            android:id="@+id/miwok"
+            android:id="@+id/miwok_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Miwok" />
 
         <TextView
-            android:id="@+id/english"
+            android:id="@+id/default_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

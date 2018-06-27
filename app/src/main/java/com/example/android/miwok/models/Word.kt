@@ -1,3 +1,3 @@
 package com.example.android.miwok.models
 
-data class Word(val english: String, val miwok: String = "")
+data class Word(val default: String, val miwok: String = "")
